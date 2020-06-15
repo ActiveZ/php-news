@@ -9,8 +9,11 @@ require_once 'bdd.php';
 
 $_POST = json_decode(file_get_contents('php://input'), true);
 
+
+
+
 // récupération des titres des news
-if ($_POST['action'] === 'getMessages') {
+if ($_POST['action'] === 'getNews') {
     $req = $pdo->prepare('SELECT * FROM news ORDER BY id DESC LIMIT 0,100');
     $req->execute();
     $data = $req->fetchAll();
@@ -18,19 +21,21 @@ if ($_POST['action'] === 'getMessages') {
     echo json_encode($data);
 }
 
-// enregistrement titre + contenu de la news dans la bdd
-elseif ($_POST['action'] === 'sendMessages') {
-    $req = $pdo->prepare('INSERT INTO news (titre, contenu) VALUES (:titre, :message)');
+
+
+// enregistrement titre + contenu de la news dans la bdd + ajout dans la table news_infos
+elseif ($_POST['action'] === 'sendNews') {
+    $req = $pdo->prepare('INSERT INTO news (titre, contenu) VALUES (:titre, :contenu)');
     $req->execute([
         'titre' => $_POST['titre'],
-        'message' => $_POST['message'],
+        'contenu' => $_POST['contenu'],
     ]);
 
-    //enregistrement dans la table news-infos
+    //enregistrement dans la table news_infos
     $req = $pdo->prepare('INSERT INTO news_infos (auteur, idNews) VALUES (:auteur, :idNews)');
     $result=$req->execute([
         'auteur' =>'Arnaud',
-        'idNews' => $pdo->lastInsertId() //id de l'enregistrement en cours
+        'idNews' => $pdo->lastInsertId() //id de l'enregistrement de la news en cours
     ]);
 }
 ?>

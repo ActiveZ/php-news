@@ -6,10 +6,10 @@ recevoir();
 
 async function envoyer () {
     let titre = document.getElementById('titre').value;
-    let message = document.getElementById('message').value;
-    if (titre === "" || message === "") return;
+    let contenu = document.getElementById('contenu').value;
+    if (titre === "" || contenu === "") return;
 
-    //console.log("data: " + titre + "---" + message );
+    //console.log("data: " + titre + "---" + contenu );
 
     let request = new Request(url, {
         method: 'POST',
@@ -17,16 +17,16 @@ async function envoyer () {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            'action': 'sendMessages',
+            'action': 'sendNews',
             'titre': titre,
-            'message': message
+            'contenu': contenu
         })
     });
 
     fetch(request);
 
     document.getElementById('titre').value = "";
-    document.getElementById('message').value = "";
+    document.getElementById('contenu').value = "";
 }
 
 
@@ -40,7 +40,7 @@ async function recevoir () {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            'action': 'getMessages'
+            'action': 'getNews'
         })
     });
       

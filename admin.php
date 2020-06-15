@@ -12,7 +12,7 @@
             <p><label for="titre">Titre</label> : <input type="text" name="titre" id="titre"></p>
 
             Contenu: <br>
-            <textarea id="message" name="" rows="10"></textarea>
+            <textarea id="contenu" name="" rows="10"></textarea>
             
             <p>
                 <button onclick="envoyer()">Envoyer</button>
