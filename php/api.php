@@ -24,10 +24,12 @@ if ($_POST['action'] === 'getNews') {
 
 // enregistrement titre + contenu de la news dans la bdd + ajout dans la table news_infos
 elseif ($_POST['action'] === 'sendNews') {
+    if($_POST['titre'] === "" || $_POST['contenu'] === "") return;
+
     $req = $pdo->prepare('INSERT INTO news (titre, contenu) VALUES (:titre, :contenu)');
     $req->execute([
-        'titre' => $_POST['titre'],
-        'contenu' => $_POST['contenu'],
+        'titre' => htmlspecialchars($_POST['titre']),
+        'contenu' => htmlspecialchars($_POST['contenu'])
     ]);
 
     //enregistrement dans la table news_infos
