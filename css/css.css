@@ -14,7 +14,7 @@ body {
     background-color: aquamarine;
 }
 
-#header {
+#header, .libelle {
   display: flex;
   flex-direction: column;
   color: whitesmoke;
