@@ -48,15 +48,32 @@ async function recevoir () {
     if (response.ok) {
         data = await response.json();
     }
-    //console.log(data);
+    console.log(data);
+    table ="<tr><th>TITRES</th></tr>";
+
     for (let d in data) {
-        // let date = new Date(data[d].dateTimestamp);
-        msg += data[d].titre + "\n";
+        table += "<tr><td>"+
+            "<button onclick='supprimer(" + data[d].id + ")'>Supprimer</button>" + 
+            "<button onclick='modifier(" + data[d].id + ")'>Modifier</button>" +
+            data[d].titre + 
+            "</td></tr><br>";
     }
 
-    document.getElementById('listeTitre').innerHTML=msg;
+    document.getElementById('tableTitre').innerHTML=table;
 
     setTimeout(() => {
         recevoir()
     }, 500)
+}
+
+
+// suppression d'un titre
+function supprimer (id) {
+    alert ("id: " + id);
+}
+
+
+// modiffication d'un titre
+function modifier (id) {
+    alert ("id: " + id);
 }

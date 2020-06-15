@@ -27,4 +27,26 @@ button {
     border-radius: 12%;
     background-color: darkgreen;
     color: white;
+    margin-left: 10px;
+    margin-right: 10px;
 }
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f1c5c5;
+  }
+
+  tr:nth-child(odd) {
+    background-color: #dddddd;
+  }

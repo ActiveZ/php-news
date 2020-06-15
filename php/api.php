@@ -11,7 +11,6 @@ $_POST = json_decode(file_get_contents('php://input'), true);
 
 
 
-
 // récupération des titres des news
 if ($_POST['action'] === 'getNews') {
     $req = $pdo->prepare('SELECT * FROM news ORDER BY id DESC LIMIT 0,100');
