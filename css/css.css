@@ -1,6 +1,6 @@
 body {
     font-family: Helvetica, sans-serif;
-    background-color: black;
+    background-color: rgb(59, 59, 59);
     display: flex;
     text-align: center;
 }
@@ -12,6 +12,14 @@ body {
     padding-bottom: 20px;
     border: ridge 20px red;
     background-color: aquamarine;
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  color: whitesmoke;
+  background-color: rgb(59, 59, 59);
+  height: 70px;
 }
 
 #titre {

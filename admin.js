@@ -56,7 +56,7 @@ async function recevoir () {
             "<button onclick='supprimer(" + data[d].id + ")'>Supprimer</button>" + 
             "<button onclick='modifier(" + data[d].id + ")'>Modifier</button>" +
             data[d].titre + 
-            "</td></tr><br>";
+            "</td></tr>";
     }
 
     document.getElementById('tableTitre').innerHTML=table;

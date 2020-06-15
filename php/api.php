@@ -28,7 +28,7 @@ elseif ($_POST['action'] === 'sendNews') {
 
     $req = $pdo->prepare('INSERT INTO news (titre, contenu) VALUES (:titre, :contenu)');
     $req->execute([
-        'titre' => htmlspecialchars($_POST['titre']),
+        'titre' => htmlspecialchars($_POST['titre']), // pour éviter l'injection SQL
         'contenu' => htmlspecialchars($_POST['contenu'])
     ]);
 

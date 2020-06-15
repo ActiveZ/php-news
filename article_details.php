@@ -9,8 +9,11 @@
         <link rel="stylesheet" href="css/css.css">
     </head>
     <body>
->
+
+
+
         
+        <script> <?='var idarticle = ' . $_GET['idarticle'] ?> </script>
         <script src="article_details.js"></script>
     </body>
 </html>

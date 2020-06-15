@@ -7,9 +7,14 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/css.css">
     </head>
-    
+
     <body>
-    <div id="main">
+        
+        <div id="main">
+
+        <div id='header'>
+            <h1>GESTIONNAIRE DE NEWS</h1>
+        </div>
 
         <p><label for="titre">Titre</label> : <input type="text" name="titre" id="titre"></p>
 
