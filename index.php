@@ -8,8 +8,8 @@
     </head>
     <body>
 
-        <div id="libelle"></div>
-        
+        <div id="divIndex"></div>
+    
         <script src="index.js"></script>
     </body>
 </html>

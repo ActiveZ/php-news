@@ -12,37 +12,56 @@ body {
     padding-bottom: 20px;
     border: ridge 20px red;
     background-color: aquamarine;
+  }
+  
+  #header {
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    background-color: rgb(59, 59, 59);
+    height: 70px;
+  }
+  
+  #divIndex {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+.resume, .libelle {
+  color: whitesmoke ;
+  cursor: pointer;
 }
 
-#header, .libelle {
-  display: flex;
-  flex-direction: column;
-  color: whitesmoke;
-  background-color: rgb(59, 59, 59);
-  height: 70px;
+.resume {
+  border: solid 3px grey;
+  font-style: italic;
+  padding: 6px;
 }
 
 #titre {
-    width: 50%;
+  width: 50%;
 }
 
 textarea {
-    width: 75%;
+  width: 75%;
 }
 
 button {
-    height: 40px;
-    border-radius: 12%;
-    background-color: darkgreen;
-    color: white;
-    margin-left: 10px;
-    margin-right: 10px;
+  height: 40px;
+  border-radius: 12%;
+  background-color: darkgreen;
+  color: white;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
+
 table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
   }
   
   td, th {

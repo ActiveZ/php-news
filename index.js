@@ -25,15 +25,22 @@ async function recevoir () {
     var libelle = ""
      for (let d in data) {
         let date = new Date(data[d].date);
-        libelle += "<p class='libelle'>Le " + date.toLocaleString() + ", " + data[d].auteur + " a écrit: <br>" + data[d].contenu + "</p>";
-        //     contenu = data[d].contenu;
-        //     document.getElementById('contenu').innerHTML=contenu;
+        libelle += "<div class='pIndex' onClick='afficherArticle(" + data[d].id + ")'>";
+            // libelle += "<span class='libelle'>Le " + date.toLocaleString() + ", " + data[d].auteur + " a écrit:" + "</span>";
+            libelle += "<p class='libelle'>Le " + date.toLocaleString() + ", " + data[d].auteur + " a écrit:" + "</p>";
+            libelle += "<p class='resume'>" + data[d].contenu + "</p>";
+        libelle += "</div>";
     }
 
-    document.getElementById('libelle').innerHTML=libelle;
-
+    document.getElementById('divIndex').innerHTML=libelle;
 
     setTimeout(() => {
         recevoir()
     }, 500)
+}
+
+
+function afficherArticle (id) {
+    alert (id);
+    location ("http://localhost/news/article_details.php&idPage=1");
 }

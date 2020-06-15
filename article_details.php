@@ -8,6 +8,10 @@
     </head>
     <body>
 
+        <div id="detail">
+            <?php require_once 'php' . DIRECTORY_SEPARATOR . 'api.detail.php';?>
+        </div>
+
         <script src="article_details.js"></script>
     </body>
 </html>
