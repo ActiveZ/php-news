@@ -32,7 +32,6 @@ async function envoyer () {
 
 async function recevoir () {
     let data;
-    let msg = "";
 
     let request = new Request(url, {
         method: 'POST',

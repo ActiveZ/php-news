@@ -9,6 +9,10 @@
     <body>
 
         <div id="divIndex"></div>
+        
+        <div id="divArticle">
+            <button onclick='home()'>Retour</button>
+        </div>
     
         <script src="index.js"></script>
     </body>
