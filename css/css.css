@@ -10,8 +10,8 @@ body {
     margin: auto;
     margin-top: 20px;
     padding-bottom: 20px;
-    border: ridge 20px red;
-    background-color: aquamarine;
+    border: ridge 20px #a7ffc4;
+    background-color: grey;
   }
   
   #header {
@@ -45,6 +45,7 @@ body {
   border: solid 3px grey;
   font-style: italic;
   padding: 6px;
+  text-align: justify;
 }
 
 #titre {
@@ -85,7 +86,7 @@ table {
   }
   
   tr:nth-child(even) {
-    background-color: #f1c5c5;
+    background-color: #a7ffc4;
   }
 
   tr:nth-child(odd) {

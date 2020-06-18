@@ -7,7 +7,6 @@ header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 
 require_once 'bdd.php';
 
-
 // récupération des articles
     $req = $pdo->prepare('SELECT * FROM news, news_infos WHERE news.id=news_infos.idNews');
     $req->execute();
