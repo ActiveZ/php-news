@@ -15,11 +15,11 @@
         <div id='header'>
             <h1>GESTIONNAIRE DE NEWS</h1>
         </div>
-
+        <h2>AJOUTER UN ARTICLE</h2>
         <p><label for="titre">Titre</label> : <input type="text" name="titre" id="titre"></p>
 
         Contenu: <br>
-        <textarea id="contenu" name="" rows="10"></textarea>
+        <textarea id="contenu" rows="10"></textarea>
         
         <p>
             <button onclick="envoyer()">Envoyer</button>

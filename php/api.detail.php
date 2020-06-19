@@ -13,6 +13,7 @@ if (!empty($_GET['idPage'])) {
     // récupération de l'article
     // $req = $pdo->prepare('SELECT * FROM news WHERE news.id = :id');
     $req = $pdo->prepare('SELECT * FROM news, news_infos WHERE news.id = :id AND news.id = news_infos.idNews');
+    //$req = $pdo->prepare('SELECT * FROM news INNER JOIN news_infos ON news.id = :id AND news.id = news_infos.idNews'); //version INNER JOIN
     $req->execute(['id' => $idPage]);
     $data = $req->fetch();
     

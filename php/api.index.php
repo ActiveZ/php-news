@@ -9,6 +9,7 @@ require_once 'bdd.php';
 
 // récupération des articles
     $req = $pdo->prepare('SELECT * FROM news, news_infos WHERE news.id=news_infos.idNews');
+    //$req = $pdo->prepare('SELECT * FROM news INNER JOIN news_infos ON news.id=news_infos.idNews'); //version INNER JOIN
     $req->execute();
     $data = $req->fetchAll();
     

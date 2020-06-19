@@ -1,6 +1,8 @@
 //fichier sur le pc client 	
 
 var url = "http://localhost/news/php/api.php"; //serveur de ce pc
+//var url = "http://frugysoft.free.fr/news/php/api.php"; //serveur free frugysoft
+
 
 recevoir();
 

@@ -7,13 +7,21 @@
         <link rel="stylesheet" href="css/css.css">
     </head>
     <body>
-
+        
         <div id="divIndex"></div>
         
-        <div id="divArticle">
-            <button onclick='home()'>Retour</button>
+        <div id="divDetail">
+            <div id="divArticle"></div>
+            
+            <div id=divCommentaire>
+                <h2>AJOUTER UN COMMENTAIRE</h2>
+                <!-- <p><label for="com">Auteur</label> : <input type="text" name="com" id="com"></p> -->
+                Contenu: <br>
+                <textarea id="contenuCom" rows="5"></textarea>
+                <p><button onclick="envoyerCom()">Envoyer</button></p>
+                <table  id = "tableCom"></table>
+            </div>
         </div>
-    
         <script src="index.js"></script>
     </body>
 </html>
