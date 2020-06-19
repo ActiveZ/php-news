@@ -15,9 +15,9 @@
             
             <div id=divCommentaire>
                 <h2>AJOUTER UN COMMENTAIRE</h2>
-                <!-- <p><label for="com">Auteur</label> : <input type="text" name="com" id="com"></p> -->
+                <p><label for="com">Auteur</label> : <input type="text" name="com" id="auteurCom" placeholder="Nom de l'auteur"></p>
                 Contenu: <br>
-                <textarea id="contenuCom" rows="5"></textarea>
+                <textarea id="contenuCom" rows="5" placeholder="Votre commentaire"></textarea>
                 <p><button onclick="envoyerCom()">Envoyer</button></p>
                 <table  id = "tableCom"></table>
             </div>

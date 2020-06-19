@@ -36,9 +36,19 @@ body {
     flex-direction: column;
   }
 
+  #titreListe {
+    color: #a7ffc4;
+  }
+
+  #divMonArticle {
+    border: solid 3px #a7ffc4;
+  }
+
   #divCommentaire {
     display: none;
     color: whitesmoke;
+    border: solid 3px #a7ffc4;
+    margin-top: 15px;
   }
 
 .resume, .libelle {
@@ -61,6 +71,10 @@ textarea {
   width: 75%;
 }
 
+#idContenu {
+  margin-top: 5px;
+}
+
 button {
   margin: auto;
   height: 40px;
@@ -76,7 +90,12 @@ button {
   width: 100px;
 }
 
-/************************************************************/
+/************************* TABLES ***********************************/
+
+#tableCom {
+  color: black;
+  margin: auto;
+}
 
 table {
   font-family: arial, sans-serif;

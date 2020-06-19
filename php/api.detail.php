@@ -7,11 +7,12 @@ header('Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Ac
 
 require_once 'bdd.php';
 
-if (!empty($_GET['idPage'])) {
-    $idPage = $_GET['idPage'];
+$_POST = json_decode(file_get_contents('php://input'), true);
+
+if (!empty($_POST['idPage'])) {
+    $idPage = $_POST['idPage'];
     
     // récupération de l'article
-    // $req = $pdo->prepare('SELECT * FROM news WHERE news.id = :id');
     $req = $pdo->prepare('SELECT * FROM news, news_infos WHERE news.id = :id AND news.id = news_infos.idNews');
     //$req = $pdo->prepare('SELECT * FROM news INNER JOIN news_infos ON news.id = :id AND news.id = news_infos.idNews'); //version INNER JOIN
     $req->execute(['id' => $idPage]);

@@ -9,12 +9,14 @@ require_once 'bdd.php';
 
 $_POST = json_decode(file_get_contents('php://input'), true);
 
-if($_POST['contenu'] === "") return;
+if($_POST['auteur'] === "" || $_POST['contenu'] === "") return;
 
 //enregistrement dans la table commentaires
-$req = $pdo->prepare('INSERT INTO commentaires (contenu) VALUES (:contenu)');
+$req = $pdo->prepare('INSERT INTO commentaires (auteur, contenu, idArticle) VALUES (:auteur, :contenu, :idArticle)');
 $req->execute([
-    // 'auteur' => htmlspecialchars($_POST['auteur']), // pour éviter l'injection SQL
+    'idArticle' => ($_POST['idArticle']),
+    'auteur' => htmlspecialchars($_POST['auteur']), // pour éviter l'injection SQL
     'contenu' => htmlspecialchars($_POST['contenu'])
 ]);
+
 ?>
